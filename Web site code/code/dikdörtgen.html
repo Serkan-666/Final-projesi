@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hipotenüs Değeri Bulma-Matkolik</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <img src="BANÜ_Logo.png" width="100" height="80" />
+</head>
+
+<body>
+
+    <div class="page-sidebar nav-collapse collapse">
+        <!-- BEGIN SIDEBAR MENU -->
+
+
+
+        <ul id="leftsidebar" class="page-sidebar">
+
+            <!--BLMS-->
+            <li class="start" id="r_menu_home">
+
+                <a href="#"> <i class="fas fa-calculator"></i> Hesaplamalar </a>
+            </li>
+
+            <li id="daire"><a href="daire.html"> Dairenin Alan ve Çevre Hesaplaması </a> </li>
+            <li id="Dikdörtgen"> <a href="dikdörtgen.html"> Dikdörtgenin Alan ve Çevre Hesaplaması</a> </li>
+            <li id="Küp"> <a href="küph.html"> Küpün Hacmi </a> </li>
+            <li id="üçgen"><a href="ucgen.html">Üçgenin Alanı</a></li>
+            <li id="kombinasyon"><a href="kombinasyon.html">Kombinasyon Hesaplama</a></li>
+            <li id="hipotebüs"> <a href="hipotenüs.html">Hipotenüs Değeri Bulma</a></li>
+            <li id="çember"><a href="çember.html">Çember Çevresi Hesaplama</a></li>
+            <li id="asal"> <a href="asal.html">Asal Sayı Kontrol</a> </li>
+            <li id="faktöriyel"><a href="faktöriyel.html">Faktöriyel Hesaplama</a></li>
+            <li id="küre"><a href="küre.html"> Küre hacmi</a></li>
+            <li id="karep"><a href="karep.html">Kare Prizmanın Hacmi ve Alanı</a></li>
+            <li id="dikdp"><a href="dikdp.html">Dikdörtgenler Prizmasının hacmi ve Alanı</a></li>
+            <li id="piramit"><a href="piramit.html">Kare Piramit Hacmi ve Alanı</a></li>
+            <li id="piramit2"><a href="silindir.html">Silindirin Hacmi ve Alanı</a></li>
+            <li id="üçgenp"><a href="üçgenp.html">Üçgen Prizmanın hacmi ve Alanı</a></li>
+
+
+
+
+        </ul>
+
+    </div>
+
+
+    <ul id="menu" class="menu">
+        <li id="anasayfa">
+            <a href="index.html"> <i class="fas fa-home"></i> Anasayfa</a>
+        </li>
+        <li><a href="hakkımda.html"><i class="fas fa-user"></i>Hakkımızda</a></li>
+        <li><a href="iletişim.html"><i class="fas fa-phone"></i>İletişim</a></li>
+
+
+
+    </ul>
+    <div class="article">
+        <article>
+
+            
+                <div class="container">
+                    <h2>
+                       Dikdörtgenin Alanı ve Çevresi Hesaplama
+                    </h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="sayi1">Kısa Kenar</label>
+                            <input type="text" class="form-control" id="sayi1" placeholder="Kısa Kenarı giriniz.">
+                        </div>
+                        <div class="form-group">
+                            <label for="sayi1">Uzun Kenar</label>
+                            <input type="text" class="form-control" id="sayi2" placeholder="Uzun Kenarı giriniz.">
+                        </div>
+                        <button type="button" id="hesapla" class="btn btn-primary">Hesapla</button>
+
+                    </form><br>
+                    <div class="alert alert-success" id="sonuc"></div>
+                    <div class="alert alert-success" id="sonuc2"></div>
+                </div>
+                <script>
+                    var hesapla = document.querySelector("#hesapla");
+                    var s1 = document.querySelector("#sayi1");
+                    var s2 = document.querySelector("#sayi2");
+                    var sonuc = document.querySelector("#sonuc");
+                    var sonuc2 = document.querySelector("#sonuc2");
+
+                    hesapla.onclick = function() {
+                        var cevre=(s1.value*2) + (s2.value * 2);
+                        var alan = s1.value * s2.value;
+
+        
+                        sonuc.textContent = "Dikdörtgenin Çevresi:" + cevre;
+                        sonuc2.textContent = "Dikdörtgenin Alanı:" + alan;
+
+
+                    }
+                </script>
+        </article>
+        </div>
+        <footer>
+            <P>Batuhan Öz ve Serkan Bakırcı</P>
+        </footer>
+
+</body>
+
+</html>

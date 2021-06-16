@@ -1,0 +1,32 @@
+<div style="margin-left:25%;padding:1px 16px;height:1000px;">
+    <div class="container">
+        <h2>
+            Kare Prizmanın Hacmi
+        </h2>
+        <form>
+            <div class="form-group">
+                <label for="kenar">Kenar Uzunluğu</label>
+                <input type="text" class="form-control" id="kenar" placeholder="Kenar Uzunluğunu giriniz.">
+            </div>
+            <div class="form-group">
+                <label for="yükseklik">Yükseklik</label>
+                <input type="text" class="form-control" id="yükseklik" placeholder="Yüksekliği giriniz.">
+            </div>
+            <button type="button" id="hesapla" class="btn btn-primary">Hesapla</button>
+
+        </form><br>
+        <div class="alert alert-success" id="sonuc"></div>
+    </div>
+    <script>
+        var hesapla = document.querySelector("#hesapla");
+        var s1 = document.querySelector("#kenar");
+        var s2 = document.querySelector("#yükseklik");
+        var sonuc = document.querySelector("#sonuc");
+
+        hesapla.onclick = function() {
+            var hacim = (s1.value * s1.value) * s2.value
+            sonuc.textContent = "Kare Prizmanın Hacmi:" + hacim;
+
+
+        }
+    </script>

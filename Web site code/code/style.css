@@ -1,0 +1,141 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-image: url(ban.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-attachment: fixed;
+        }
+        
+        .page-sidebar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 15%;
+            background-color: gray;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+        
+        .page-sidebar li {
+            margin-bottom: 0px;
+            border-bottom: 0.05px solid white;
+            padding: 2%;
+        }
+        
+        .page-sidebar li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+        
+        .page-sidebar li a.active {
+            background-color: green;
+            color: white;
+        }
+        
+        .start,
+        .page-sidebar li:hover {
+            background: #37b358;
+            border-radius: 15px;
+        }
+        
+        .menu {
+            background-color: gray;
+            width: 100%;
+            margin: 0;
+            border: 1px solid gray;
+            list-style-type: none;
+            position: fixed;
+            padding-top: 10px;
+            display: inline-flex;
+            list-style: none;
+            height: 84px;
+        }
+        
+        .menu li {
+            list-style: none;
+            height: 10px;
+            margin: 0;
+            border: 0;
+            padding: 25px 100px;
+        }
+        
+        .menu li a {
+            color: white;
+            text-decoration: none;
+            padding-left: 150px;
+            text-align: center;
+        }
+        
+        .menu li:hover {
+            background: #37b358;
+            border-radius: 15px;
+        }
+        
+        div article {
+            margin-left: 15%;
+        }
+        
+        footer {
+            background-color: grey;
+            padding: 15px;
+            text-align: center;
+            margin-top: 100%;
+        }
+        
+        fieldset {
+            background-color: #eeeeee;
+        }
+        
+        legend {
+            background-color: gray;
+            color: white;
+            padding: 5px 10px;
+        }
+        
+        input {
+            margin: 5px;
+        }
+        
+        fieldset p {
+            padding: 30px;
+        }
+        
+        article {
+            border: 10px solid grey;
+            padding: 10px 20px;
+            width: 100%;
+            float: left;
+            display: inline-flexbox;
+            border-radius: 15px;
+        }
+        
+        .kapsul {
+            width: 500px;
+            min-height: 1px;
+            border: 1px solid #ddd;
+            margin: 10px;
+            background: #f4f4f4;
+            padding: 5px;
+        }
+        
+        .satir {
+            margin: 10px;
+        }
+        
+        input,
+        button {
+            border: 1px solid grey;
+            padding: 3px;
+        }
+        
+        article li {
+            list-style-type: none;
+        }

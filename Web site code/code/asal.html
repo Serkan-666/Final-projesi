@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asal Sayı-Matkolik</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <img src="BANÜ_Logo.png" width="100" height="80" />
+</head>
+
+<body>
+
+    <div class="page-sidebar nav-collapse collapse">
+        <!-- BEGIN SIDEBAR MENU -->
+
+
+
+        <ul id="leftsidebar" class="page-sidebar">
+
+            <!--BLMS-->
+            <li class="start" id="r_menu_home">
+
+                <a href="#"> <i class="fas fa-calculator"></i> Hesaplamalar </a>
+            </li>
+            <li id="daire"><a href="daire.html"> Dairenin Alan ve Çevre Hesaplaması </a> </li>
+            <li id="Dikdörtgen"> <a href="dikdörtgen.html"> Dikdörtgenin Alan ve Çevre Hesaplaması</a> </li>
+            <li id="Küp"> <a href="küph.html"> Küpün Hacmi </a> </li>
+            <li id="üçgen"><a href="ucgen.html">Üçgenin Alanı</a></li>
+            <li id="kombinasyon"><a href="kombinasyon.html">Kombinasyon Hesaplama</a></li>
+            <li id="hipotebüs"> <a href="hipotenüs.html">Hipotenüs Değeri Bulma</a></li>
+            <li id="çember"><a href="çember.html">Çember Çevresi Hesaplama</a></li>
+            <li id="asal"> <a href="asal.html">Asal Sayı Kontrol</a> </li>
+            <li id="faktöriyel"><a href="faktöriyel.html">Faktöriyel Hesaplama</a></li>
+            <li id="küre"><a href="küre.html"> Küre hacmi</a></li>
+            <li id="karep"><a href="karep.html">Kare Prizmanın Hacmi ve Alanı</a></li>
+            <li id="dikdp"><a href="dikdp.html">Dikdörtgenler Prizmasının hacmi ve Alanı</a></li>
+            <li id="piramit"><a href="piramit.html">Kare Piramit Hacmi ve Alanı</a></li>
+            <li id="piramit2"><a href="silindir.html">Silindirin Hacmi ve Alanı</a></li>
+            <li id="üçgenp"><a href="üçgenp.html">Üçgen Prizmanın hacmi ve Alanı</a></li>
+
+
+
+
+        </ul>
+
+    </div>
+
+
+    <ul id="menu" class="menu">
+        <li id="anasayfa">
+            <a href="index.html"> <i class="fas fa-home">Anasayfa</i> </a>
+        </li>
+        <li><a href="hakkımda.html"><i class="fas fa-user"></i>Hakkımızda</a></li>
+        <li><a href="iletişim.html"><i class="fas fa-phone"></i>İletişim</a></li>
+
+
+    </ul>
+    <div class="article">
+        <article>
+
+
+            <input type="text" id="sayi" placeholder="3'ten Büyük Sayı Giriniz" />
+            <button onclick="javascript: return fnHesapla();">Asal mı?</button>
+            <span id="sonuc"></span>
+            <script>
+                function fnHesapla() {
+                    var intSayi = document.getElementById("sayi").value;
+                    if (intSayi.length < 1 || isNaN(intSayi)) {
+                        alert("Lütfen sayısal bir değer giriniz!");
+                    } else {
+                        if (intSayi < 3) {
+                            alert("Lütfen 3'ten büyük bir sayı giriniz!");
+                        } else {
+                            if (intSayi % 2 == '0') {
+                                alert("Girdiğiniz sayı çift bir sayıdır.\nLütfen tek bir tamsayı giriniz!");
+                            } else {
+                                var intSon_Sayi = Math.floor(Math.sqrt(intSayi));
+                                intSon_Sayi = intSon_Sayi + 1;
+                                var intTam_Bolen_Sayisi = 0;
+                                for (i = 3; i <= intSon_Sayi; i++) {
+                                    var realBolum = intSayi / i;
+                                    if (realBolum.toString().indexOf(".") == -1) {
+                                        intTam_Bolen_Sayisi = intTam_Bolen_Sayisi + 1;
+                                        break;
+                                    }
+                                }
+                                if (intTam_Bolen_Sayisi == 0) {
+                                    strYazi = '<strong>' + intSayi + '</strong> sayısı asaldır.';
+                                } else {
+                                    strYazi = '<strong>' + intSayi + '</strong> sayısı asal değildir.';
+                                    strYazi = strYazi + '<br />';
+                                    strYazi = strYazi + 'Bu sayı <strong>' + i + '</strong> sayısına tam bölünmektedir.';
+                                }
+                                document.getElementById("sonuc").innerHTML = strYazi;
+                            }
+                        }
+                    }
+                }
+            </script>
+
+        </article>
+    </div>
+    <footer>
+        <P>Batuhan Öz ve Serkan Bakırcı</P>
+    </footer>
+
+</body>
+
+</html>
